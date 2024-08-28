@@ -1,3 +1,40 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    //"plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": [
+    "react-refresh"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": 0
+  },
+  // "rules": {
+  //   "react-refresh/only-export-components": [
+  //     "warn",
+  //     {
+  //       "allowConstantExport": true
+  //     }
+  //   ]
+  // },
+  "overrides": [
+    {
+      "files": [
+        "*.html",
+        "*.blade.php"
+      ],
+      "parser": "@angular-eslint/template-parser"
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js"
+      ],
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
 }
